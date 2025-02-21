@@ -4,6 +4,17 @@ from config import API_KEY
 
 
 def fetch_weather_data(city):
+    """
+    Fetches weather data for a specified city from the OpenWeather API.
+
+    Args:
+        city (str): The name of the city to fetch the weather for.
+
+    Returns:
+        dict: A dictionary containing relevant weather information such as temperature,
+              humidity, weather description, and wind speed.
+        None: If there is an error in fetching the weather data.
+    """
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
 
     try:
