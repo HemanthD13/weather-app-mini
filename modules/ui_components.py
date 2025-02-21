@@ -31,5 +31,7 @@ def display_weather(weather_data):
         st.write(f"☁️ **Weather**: {weather_data['weather_description'].capitalize()}")
         st.write(f"🌬️ **Wind Speed**: {weather_data['wind_speed']} m/s")
 
+
     else:
-        st.error("Failed to fetch weather data.")
+
+        st.error("Failed to  fetch weather data.")
