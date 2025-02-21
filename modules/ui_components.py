@@ -7,7 +7,7 @@ def get_weather_image(weather_description):
     if 'clear' in weather_description:
         return "images/sunny.jpg"
     elif 'cloud' in weather_description:
-        return "images/cloudy.jpg"
+        return "images/cloudy1.jpg"
     elif 'rain' in weather_description:
         return "images/rainy.jpg"
     elif 'snow' in weather_description:
