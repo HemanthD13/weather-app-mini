@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+from modules.utils import fahrenheit, kelvin
 
 # Add background images for different weather conditions
 def get_weather_image(weather_description):
@@ -15,7 +16,7 @@ def get_weather_image(weather_description):
     else:
         return "images/haze.jpg"
 
-def display_weather(weather_data):
+def display_weather(weather_data,unit):
     """Displays weather data in a user-friendly format."""
     if weather_data:
         # Get the appropriate weather image
@@ -26,7 +27,12 @@ def display_weather(weather_data):
 
         # Display weather information with better styling
         st.write(f"### Weather in {weather_data['city']}")
-        st.write(f"🌡️ **Temperature**: {weather_data['temperature']}°C")
+        if unit == "Fahrenheit":
+            st.write(f"🌡️ **Temperature**: {fahrenheit(weather_data['temperature'])}°F")
+        elif unit == "Kelvin":
+            st.write(f"🌡️ **Temperature**: {kelvin(weather_data['temperature'])} K")
+        else:
+            st.write(f"🌡️ **Temperature**: {weather_data['temperature']}°C")
         st.write(f"💧 **Humidity**: {weather_data['humidity']}%")
         st.write(f"☁️ **Weather**: {weather_data['weather_description'].capitalize()}")
         st.write(f"🌬️ **Wind Speed**: {weather_data['wind_speed']} m/s")
