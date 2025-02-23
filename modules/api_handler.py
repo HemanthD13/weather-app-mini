@@ -1,7 +1,5 @@
-# modules/api_handler.py
 import requests
 from config import API_KEY
-
 
 def fetch_weather_data(city):
     """
@@ -36,3 +34,4 @@ def fetch_weather_data(city):
     except requests.exceptions.RequestException as e:
         print(f"Error fetching weather data: {e}")
         return None
+

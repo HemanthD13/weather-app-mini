@@ -1,1 +1,1 @@
-This application lets you search for cities by their names and see their weather along with there temperature, pressure and humidity.
+This app allows you to search for cities by name and view their weather details, including temperature, pressure, and humidity. You can also switch between temperature scales: Celsius, Kelvin, and Fahrenheit. 
