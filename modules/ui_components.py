@@ -1,3 +1,4 @@
+# ui_components.py
 import streamlit as st
 from PIL import Image
 from modules.utils import fahrenheit, kelvin
